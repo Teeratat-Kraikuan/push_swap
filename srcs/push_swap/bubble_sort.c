@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-static void sort_b(t_stacks *stks,int *len)
+static void	sort_b(t_stacks *stks, int *len)
 {
-	int t_len;
+	int	t_len;
 
 	t_len = *len;
 	while (--t_len)
@@ -26,9 +26,9 @@ static void sort_b(t_stacks *stks,int *len)
 	(*len)--;
 }
 
-static void sort_a(t_stacks *stks,int *len)
+static void	sort_a(t_stacks *stks, int *len)
 {
-	int t_len;
+	int	t_len;
 
 	t_len = *len;
 	while (--t_len)
@@ -40,9 +40,9 @@ static void sort_a(t_stacks *stks,int *len)
 	(*len)--;
 }
 
-void bubble_sort(t_stacks *stks)
+void	bubble_sort(t_stacks *stks)
 {
-	int	len;
+	int		len;
 	t_node	*temp;
 
 	len = 0;

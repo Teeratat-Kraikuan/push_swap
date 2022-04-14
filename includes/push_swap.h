@@ -18,10 +18,11 @@
 # include "ft_utils.h"
 # include "stack.h"
 
-void	insertion_sort(t_stacks *stks);
-
 # define ASCENDING 0
 # define DESCENDING 1
+
+void	insertion_sort(t_stacks *stks);
+
 void	quick_sort(t_stacks *stks);
 int		get_median(t_stacks *stks, t_node *node, int len);
 int		is_sorted(t_node *node, int len, int mode);

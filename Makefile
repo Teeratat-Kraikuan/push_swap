@@ -6,7 +6,8 @@ UTILS = $(addprefix srcs/ft_utils/, $(FT_UTILS))
 
 FT_PUSH_SWAP =	insertion_sort.c \
 				quick_sort1.c \
-				quick_sort2.c
+				quick_sort2.c \
+				bubble_sort.c
 PUSH_SWAP = $(addprefix srcs/push_swap/, $(FT_PUSH_SWAP))
 
 FT_STK =	ft_stack_utils1.c \

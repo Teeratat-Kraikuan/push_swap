@@ -27,4 +27,6 @@ void	quick_sort(t_stacks *stks);
 int		get_median(t_stacks *stks, t_node *node, int len);
 int		is_sorted(t_node *node, int len, int mode);
 
+void	bubble_sort(t_stacks *stks);
+
 #endif

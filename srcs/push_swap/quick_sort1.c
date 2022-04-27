@@ -128,17 +128,9 @@ void	quick_sort(t_stacks *stks)
 		temp = temp->link;
 		len++;
 	}
-	if (len == 3)
-	{
-		if (stks->a->val > stks->a->link->val
-			&& stks->a->link->val > stks->a->link->link->val)
-			sa(stks);
-		if (stks->a->val > stks->a->link->link->val
-			&& stks->a->link->link->val > stks->a->link->val)
-			ra(stks);
-		if (stks->a->link->val > stks->a->val
-			&& stks->a->val > stks->a->link->link->val)
-			rra(stks);
-	}
+	if (is_sorted(stks->a, len, ASCENDING))
+		return ;
+	if (len <= 5)
+		simple_sort(stks, len);
 	quick_sort_a(stks, len);
 }

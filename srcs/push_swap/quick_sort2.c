@@ -74,3 +74,41 @@ int	is_sorted(t_node *node, int len, int mode)
 	}
 	return (1);
 }
+
+static void	simple_sort_5(t_stacks *stks)
+{
+	int	b_len;
+	int	pivot;
+
+	b_len = 0;
+	pivot = get_median(stks, stks->a, 5);
+	while (b_len != 2)
+	{
+		if (stks->a->val < pivot && ++b_len)
+			pb(stks);
+		else
+			ra(stks);
+	}
+	simple_sort(stks, 3);
+	if (stks->b->val < stks->b->link->val)
+		sb(stks);
+	pa(stks);
+	pa(stks);
+}
+
+void	simple_sort(t_stacks *stks, int len)
+{
+	if (len == 3)
+	{
+		if (stks->a->val > stks->a->link->link->val
+			&& stks->a->val > stks->a->link->val)
+			ra(stks);
+		if (stks->a->link->val > stks->a->val
+			&& stks->a->link->val > stks->a->link->link->val)
+			rra(stks);
+		if (stks->a->val > stks->a->link->val)
+			sa(stks);
+	}
+	else if (len == 5)
+		simple_sort_5(stks);
+}

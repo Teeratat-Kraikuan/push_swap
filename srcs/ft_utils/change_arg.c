@@ -6,13 +6,13 @@
 /*   By: tkraikua <tkraikua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:11:18 by tkraikua          #+#    #+#             */
-/*   Updated: 2022/08/12 13:53:05 by tkraikua         ###   ########.fr       */
+/*   Updated: 2022/08/12 14:31:57 by tkraikua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_cnt_nbr(char *str)
+int	ft_cnt_nbr(char *str)
 {
 	int	cnt;
 	int	i;
@@ -40,10 +40,10 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char *ft_dup(char *str)
+char	*ft_dup(char *str)
 {
-	char *s;
-	int	i;
+	char	*s;
+	int		i;
 
 	s = malloc(sizeof(char) * ft_strlen(str));
 	i = 0;
@@ -55,13 +55,13 @@ char *ft_dup(char *str)
 	return (s);
 }
 
-char **ft_split(int argc, char *argv0, char *argv1)
+char	**ft_split(int argc, char *argv0, char *argv1)
 {
-	char **str;
-	int	i;
-	int	j;
+	char	**str;
+	int		i;
+	int		j;
 
-	str = malloc(sizeof(char*) * argc + 1);
+	str = malloc(sizeof(char *) * argc + 1);
 	i = 1;
 	j = 0;
 	str[0] = argv0;
@@ -81,7 +81,7 @@ char **ft_split(int argc, char *argv0, char *argv1)
 	return (str);
 }
 
-int change_arg(int *argc, char ***argv)
+int	change_arg(int *argc, char ***argv)
 {
 	if (*argc != 2)
 		return (0);

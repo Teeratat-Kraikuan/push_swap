@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_arg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkraikua <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkraikua <tkraikua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 01:22:37 by tkraikua          #+#    #+#             */
-/*   Updated: 2022/04/10 01:22:37 by tkraikua         ###   ########.fr       */
+/*   Updated: 2022/08/12 13:44:28 by tkraikua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	check_arg(int argc, char **argv)
 	int			j;
 	long long	tmp;
 
-	if (argc < 2)
+	if (argc == 1)
 		exit(0);
 	i = 1;
 	while (i < argc)

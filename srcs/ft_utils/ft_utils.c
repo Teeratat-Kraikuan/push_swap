@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkraikua <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkraikua <tkraikua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 23:37:36 by tkraikua          #+#    #+#             */
-/*   Updated: 2022/04/07 23:37:36 by tkraikua         ###   ########.fr       */
+/*   Updated: 2022/08/12 13:47:37 by tkraikua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,17 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (res * check_neg);
+}
+
+void	free_argv(int argc, char **argv)
+{
+	int	i;
+
+	i = 1;
+	while (i <= argc)
+	{
+		free(argv[i]);
+		i++;
+	}
+	free(argv);
 }

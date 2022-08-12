@@ -1,7 +1,8 @@
 NAME = push_swap
 
 FT_UTILS = 	check_arg.c \
-			ft_utils.c
+			ft_utils.c \
+			change_arg.c
 UTILS = $(addprefix srcs/ft_utils/, $(FT_UTILS))
 
 FT_PUSH_SWAP =	insertion_sort.c \
@@ -24,7 +25,7 @@ OBJS = $(SRCS:.c=.o)
 
 
 LIB = ar -rcs
-FLAGS = -Wall -Werror -Wextra
+FLAGS = # -Wall -Werror -Wextra
 
 all : $(NAME)
 

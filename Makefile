@@ -25,7 +25,7 @@ OBJS = $(SRCS:.c=.o)
 
 
 LIB = ar -rcs
-FLAGS = # -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra
 
 all : $(NAME)
 

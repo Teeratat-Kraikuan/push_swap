@@ -6,7 +6,7 @@
 /*   By: tkraikua <tkraikua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 21:01:04 by tkraikua          #+#    #+#             */
-/*   Updated: 2022/08/12 20:20:57 by tkraikua         ###   ########.fr       */
+/*   Updated: 2022/08/13 11:19:11 by tkraikua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
 
 # include "ft_utils.h"

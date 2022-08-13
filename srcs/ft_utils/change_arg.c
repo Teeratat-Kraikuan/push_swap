@@ -6,7 +6,7 @@
 /*   By: tkraikua <tkraikua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:11:18 by tkraikua          #+#    #+#             */
-/*   Updated: 2022/08/12 14:31:57 by tkraikua         ###   ########.fr       */
+/*   Updated: 2022/08/13 10:53:46 by tkraikua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_cnt_nbr(char *str)
 		while (str[i] != ' ' && str[i] != '\0')
 			i++;
 		cnt++;
+		while (str[i] == ' ')
+			i++;
 	}
 	return (cnt);
 }
@@ -75,6 +77,8 @@ char	**ft_split(int argc, char *argv0, char *argv1)
 			i++;
 		}
 		while (argv1[j] != ' ' && argv1[j] != '\0')
+			j++;
+		while (argv1[j] == ' ')
 			j++;
 	}
 	str[i] = 0;

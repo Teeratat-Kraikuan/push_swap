@@ -6,7 +6,7 @@
 /*   By: tkraikua <tkraikua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 01:22:37 by tkraikua          #+#    #+#             */
-/*   Updated: 2022/08/12 13:44:28 by tkraikua         ###   ########.fr       */
+/*   Updated: 2022/08/12 20:39:05 by tkraikua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ long long	ft_atoi_ll(const char *str)
 
 static void	error(void)
 {
-	write(1, "Error\n", 6);
+	write(STDERR_FILENO, "Error\n", 6);
 	exit(1);
 }
 
@@ -48,6 +48,8 @@ static int	is_nbr(char *str)
 {
 	if (*str == '-' || *str == '+')
 		str++;
+	if (*str < '0' || *str > '9')
+		return (0);
 	while (*str)
 	{
 		if (*str < '0' || *str > '9')

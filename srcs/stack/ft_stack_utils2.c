@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stack_utils2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkraikua <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tkraikua <tkraikua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 01:38:15 by tkraikua          #+#    #+#             */
-/*   Updated: 2022/04/09 01:38:15 by tkraikua         ###   ########.fr       */
+/*   Updated: 2022/08/12 20:21:55 by tkraikua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ void	free_stacks(t_stacks *stks)
 void	stack_error(t_stacks *stks)
 {
 	free_stacks(stks);
-	write(1, "Stack Error\n", 12);
+	write(STDERR_FILENO, "Stack Error\n", 12);
 	exit(1);
 }
